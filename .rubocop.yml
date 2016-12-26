@@ -1,0 +1,40 @@
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+    - lib/**/*.rake
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - '**/vendor/**/*'
+    - '**/templates/**/*'
+
+Lint/AssignmentInCondition:
+  Exclude:
+    - 'bin/spring'
+
+Lint/HandleExceptions:
+  Enabled: false
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Rails/FilePath:
+  Exclude:
+    - 'config/environments/development.rb'
+
+Rails:
+  Enabled: true
