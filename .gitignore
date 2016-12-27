@@ -10,6 +10,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 config/database.yml
+spec/examples.txt
 #config/secrets.yml
 
 /.idea
