@@ -29,6 +29,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  gem 'awesome_print'
   gem 'brakeman', require: false
   gem 'byebug', platform: :mri
   gem 'database_cleaner'
@@ -44,6 +45,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'bullet'
   gem 'listen', '~> 3.0.5'
+  gem 'pry-rails'
   gem 'sextant'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
