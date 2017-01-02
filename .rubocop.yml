@@ -26,6 +26,15 @@ Metrics/LineLength:
 Metrics/MethodLength:
   Max: 20
 
+Metrics/ModuleLength:
+  Exclude:
+    - "**/*_spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*_spec.rb"
+    - lib/tasks/auto_annotate_models.rake
+
 Style/ClassAndModuleChildren:
   Enabled: false
 
