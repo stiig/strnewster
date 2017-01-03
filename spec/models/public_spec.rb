@@ -37,8 +37,42 @@ describe Public do
       end
 
       it 'must be greater that zero' do
-        subject.width = Faker::Number.negative
+        subject.width = Faker::Number.negative.round
         expect(subject.valid?).to be false
+      end
+
+      it 'must be default zero' do
+        pub = Public.new
+        expect(pub.width).to be 0
+      end
+    end
+
+    context 'height' do
+      it 'must be presence' do
+        expect(subject.valid?).to be true
+
+        subject.height = nil
+        expect(subject.valid?).to be false
+      end
+
+      it 'must be number' do
+        subject.height = Faker::Lorem.word
+        expect(subject.valid?).to be false
+      end
+
+      it 'must be integer' do
+        subject.height = Faker::Number.decimal(2)
+        expect(subject.valid?).to be false
+      end
+
+      it 'must be greater that zero' do
+        subject.height = Faker::Number.negative.round
+        expect(subject.valid?).to be false
+      end
+
+      it 'must be default zero' do
+        pub = Public.new
+        expect(pub.height).to be 0
       end
     end
   end
