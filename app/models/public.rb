@@ -3,6 +3,9 @@ class Public < ApplicationRecord
   validates :outer_id, presence: true, uniqueness: true
   validates :width, :height, presence: true, numericality: { only_integer: true,
                                                              greater_than_or_equal_to: 0 }
+  validates :mode, presence: true, numericality: { only_integer: true,
+                                                   greater_than_or_equal_to: 0,
+                                                   less_than_or_equal_to: 4 }
 end
 
 # == Schema Information
