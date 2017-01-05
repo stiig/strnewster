@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+logger = Logger.new(STDOUT)
+
+publics = [
+  { title: 'Typical', outer_id: 33775112 }
+]
+
+logger.info 'Seeds publics'
+publics.each do |pub|
+  Public.find_or_create_by(pub)
+end
