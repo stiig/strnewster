@@ -10,10 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170105164703) do
+ActiveRecord::Schema.define(version: 20170106161022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "feed_sources", force: :cascade do |t|
+    t.string   "title"
+    t.string   "url"
+    t.boolean  "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "publics", force: :cascade do |t|
     t.string   "outer_id",                         null: false
