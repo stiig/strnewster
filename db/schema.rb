@@ -16,11 +16,12 @@ ActiveRecord::Schema.define(version: 20170106161022) do
   enable_extension "plpgsql"
 
   create_table "feed_sources", force: :cascade do |t|
-    t.string   "title"
-    t.string   "url"
-    t.boolean  "active"
+    t.string   "title",      null: false
+    t.string   "url",        null: false
+    t.boolean  "active",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["url"], name: "index_feed_sources_on_url", unique: true, using: :btree
   end
 
   create_table "publics", force: :cascade do |t|
