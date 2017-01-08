@@ -19,12 +19,7 @@ describe Public do
     end
 
     context 'width' do
-      it 'must be presence' do
-        expect(subject.valid?).to be true
-
-        subject.width = nil
-        expect(subject.valid?).to be false
-      end
+      it('must be presence') { expect(subject).to validate_presence_of(:width) }
 
       it 'must be number' do
         subject.width = Faker::Lorem.word
@@ -48,12 +43,7 @@ describe Public do
     end
 
     context 'height' do
-      it 'must be presence' do
-        expect(subject.valid?).to be true
-
-        subject.height = nil
-        expect(subject.valid?).to be false
-      end
+      it('must be presence') { expect(subject).to validate_presence_of(:height) }
 
       it 'must be number' do
         subject.height = Faker::Lorem.word
