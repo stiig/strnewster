@@ -3,28 +3,12 @@ describe FeedSource do
   subject { create(:feed_source) }
   describe 'attributes' do
     context 'title' do
-      it 'must be presence' do
-        expect(subject.valid?).to be true
-
-        subject.title = nil
-        expect(subject.valid?).to be false
-      end
+      it('must be presence') { is_expected.to validate_presence_of(:title) }
     end
 
     context 'url' do
-      it 'must be presence' do
-        expect(subject.valid?).to be true
-
-        subject.url = nil
-        expect(subject.valid?).to be false
-      end
-
-      it 'must be uniq' do
-        dup = build(:feed_source, url: subject.url)
-
-        expect(dup.valid?).to be false
-        expect { dup.save!(validate: false) }.to raise_error ActiveRecord::RecordNotUnique
-      end
+      it('must be presence') { is_expected.to validate_presence_of(:url) }
+      it('must be uniq') { is_expected.to validate_uniqueness_of(:url) }
     end
 
     context 'active' do
