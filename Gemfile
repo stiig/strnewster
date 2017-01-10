@@ -35,7 +35,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'faker'
-  gem 'rspec-rails', require: false
+  gem 'rspec-rails', '~> 3.5'
   gem 'rubocop', require: false, github: 'bbatsov/rubocop'
 end
 

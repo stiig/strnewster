@@ -53,6 +53,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.generators do |g|
+    g.hidden_namespaces << :test_unit << :erb
     g.test_framework  :rspec
     g.integration_tool :rspec
   end

@@ -272,7 +272,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.0)
   rails (~> 5.0.1)
-  rspec-rails
+  rspec-rails (~> 3.5)
   rubocop!
   russian
   sass-rails (~> 5.0)
