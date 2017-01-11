@@ -9,7 +9,7 @@ class FeedParser
   def perform
     doc = open(@url)
     @parse_page = RSS::Parser.parse(doc, false)
-    item_container
+    item_container if @parse_page
   end
 
   private

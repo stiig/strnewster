@@ -37,6 +37,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails', '~> 3.5'
   gem 'rubocop', require: false, github: 'bbatsov/rubocop'
+  gem 'webmock', require: false
 end
 
 group :development do
