@@ -22,8 +22,7 @@ describe FeedParser do
     end
 
     context 'when rss link is right' do
-      # FIXME: fix time zone
-      let(:time_now) { Time.current.to_time }
+      let(:time_now) { Time.now.utc }
 
       let(:atom_body) do
         RSS::Maker.make('atom') do |maker|

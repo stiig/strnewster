@@ -7,13 +7,19 @@ class FeedParser
   end
 
   def perform
-    doc = open(@url, read_timeout: 5, open_timeout: 3).read
-    doc.gsub!('encoding="windows-1251"', 'encoding="UTF-8"')
-    @parsed_feed = RSS::Parser.parse(doc, false)
+    perform_request { |doc| @parsed_feed = RSS::Parser.parse(doc, false) }
     item_container if @parsed_feed
   end
 
   private
+
+  def perform_request
+    old_def_encoding = Encoding.default_internal
+    Encoding.default_internal = nil
+    doc = open(@url, read_timeout: 5, open_timeout: 3).read
+    yield doc
+    Encoding.default_internal = old_def_encoding
+  end
 
   def item_container
     case @parsed_feed.feed_type
