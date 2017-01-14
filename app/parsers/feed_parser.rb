@@ -34,7 +34,7 @@ class FeedParser
     feed.items.collect do |item|
       {
         date: Time.zone.parse(item.published.to_s),
-        content: item.title.content,
+        title: item.title.content,
         link: item.link.href
       }
     end
@@ -44,7 +44,7 @@ class FeedParser
     feed.items.collect do |item|
       {
         date: Time.zone.parse(item.pubDate.to_s),
-        content: item.title,
+        title: item.title,
         link: item.link
       }
     end
