@@ -2,6 +2,8 @@
 require 'rss'
 
 class FeedParser
+  ParsedItem = Struct.new(:title, :link, :date)
+
   def initialize(url)
     @url = url
   end
@@ -32,21 +34,13 @@ class FeedParser
 
   def parse_atom(feed)
     feed.items.collect do |item|
-      {
-        date: Time.zone.parse(item.published.to_s),
-        title: item.title.content,
-        link: item.link.href
-      }
+      ParsedItem.new(item.title.content, item.link.href, Time.zone.parse(item.published.to_s))
     end
   end
 
   def parse_rss(feed)
     feed.items.collect do |item|
-      {
-        date: Time.zone.parse(item.pubDate.to_s),
-        title: item.title,
-        link: item.link
-      }
+      ParsedItem.new(item.title, item.link, Time.zone.parse(item.pubDate.to_s))
     end
   end
 end

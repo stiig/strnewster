@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170106161022) do
+ActiveRecord::Schema.define(version: 20170115133135) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170106161022) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["url"], name: "index_feed_sources_on_url", unique: true, using: :btree
+  end
+
+  create_table "parsed_articles", force: :cascade do |t|
+    t.string   "title",          null: false
+    t.string   "link",           null: false
+    t.datetime "date",           null: false
+    t.integer  "feed_source_id", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["feed_source_id"], name: "index_parsed_articles_on_feed_source_id", using: :btree
   end
 
   create_table "publics", force: :cascade do |t|
@@ -36,4 +46,5 @@ ActiveRecord::Schema.define(version: 20170106161022) do
     t.index ["outer_id"], name: "index_publics_on_outer_id", unique: true, using: :btree
   end
 
+  add_foreign_key "parsed_articles", "feed_sources"
 end

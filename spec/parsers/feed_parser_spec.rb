@@ -61,14 +61,14 @@ describe FeedParser do
         stub_request(:get, uri).to_return(body: atom_body.to_s)
 
         expect(described_class.new(uri).perform).to be_a Array
-        expect(described_class.new(uri).perform).to include(be_a(Hash))
+        expect(described_class.new(uri).perform).to include(be_a(described_class::ParsedItem))
       end
 
       it 'should return array of hashes when rss body' do
         stub_request(:get, uri).to_return(body: rss_body.to_s)
 
         expect(described_class.new(uri).perform).to be_a Array
-        expect(described_class.new(uri).perform).to include(be_a(Hash))
+        expect(described_class.new(uri).perform).to include(be_a(described_class::ParsedItem))
       end
 
       context 'when answer is exist' do
@@ -77,7 +77,7 @@ describe FeedParser do
         end
 
         it 'inner hash should have right keys' do
-          expect(described_class.new(uri).perform.first).to include(:date, :title, :link)
+          expect(described_class.new(uri).perform.first).to respond_to(:date, :title, :link)
         end
       end
     end
