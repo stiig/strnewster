@@ -3,6 +3,8 @@ class FeedSource < ApplicationRecord
   validates :title, :url, presence: true
   validates :active, inclusion: { in: [true, false] }
   validates :url, uniqueness: true
+
+  scope :activated, -> { where active: true }
 end
 
 # == Schema Information
