@@ -20,4 +20,18 @@ describe FeedSource do
       end
     end
   end
+
+  describe 'scopes' do
+    context 'when activated' do
+      it 'should contain only activated' do
+        subject.active = true
+        subject.save
+        expect(described_class.activated.size).to eq(1)
+        create_list(:feed_source, 9, active: true)
+        create_list(:feed_source, 5, active: false)
+        expect(described_class.activated.size).to eq(10)
+        expect(described_class.all.size).to eq(15)
+      end
+    end
+  end
 end
