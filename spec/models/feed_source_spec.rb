@@ -22,6 +22,13 @@ describe FeedSource do
   end
 
   describe 'scopes' do
+    context 'when default scope' do
+      it 'shoult contain all objects' do
+        create_list(:feed_source, 10)
+        expect(described_class.all.size).to eq(10)
+      end
+    end
+
     context 'when activated' do
       it 'should contain only activated' do
         subject.active = true
