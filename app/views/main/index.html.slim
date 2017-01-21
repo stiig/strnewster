@@ -9,7 +9,7 @@
             br
             time datetime=article.date #{l(article.date, format: '%d.%m.%Y')}
 
-  .row.justify-content-md-center
+  .row.justify-content-center
     = paginate @parsed_articles,
             theme: 'prev_next_theme',
             window: 0,
