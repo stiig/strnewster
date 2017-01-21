@@ -1,0 +1,18 @@
+.container
+  ul.list-unstyled.row
+    - @parsed_articles.each_with_index do |article, index|
+      li.col-12.col-md-4
+        article.row
+          header.col-7 #{link_to(article.title, article.link)}
+          footer.col-5.text-right
+            = article.feed_source.title
+            br
+            time datetime=article.date #{l(article.date, format: '%d.%m.%Y')}
+
+  .row.justify-content-md-center
+    = paginate @parsed_articles,
+            theme: 'prev_next_theme',
+            window: 0,
+            remote: true,
+            outer_window: 0,
+            params: { controller: 'main', action: 'index' }
