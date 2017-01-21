@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bbatsov/rubocop.git
-  revision: c4a07911e31a4664b65fa5718eaacb22f2f407df
+  revision: b1d5e4ad9ae0f817e05379744080fccda633dcda
   specs:
     rubocop (0.47.1)
       parser (>= 2.3.3.1, < 3.0)
@@ -240,7 +240,7 @@ GEM
       railties (>= 3.1)
       slim (~> 3.0)
     slop (3.6.0)
-    spring (2.0.0)
+    spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
