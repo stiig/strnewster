@@ -1,0 +1,4 @@
+- unless current_page.first?
+  li.page-item
+    = link_to_unless current_page.first?, raw(t 'views.pagination.previous'), url,
+            class: 'page-link', rel: 'next', remote: remote
