@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 class ParserRunnerService
-  def parse_data
+  def self.parse_data
     logger = Rails.logger
     logger.info 'ParserRunnerService start'
     FeedSource.activated.each do |element|
