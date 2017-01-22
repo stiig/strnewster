@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bbatsov/rubocop.git
-  revision: c500b3c760d334c733af1ce2229a2db65957c875
+  revision: d76dc907dc0f249615aa8a6b003f50247b187747
   specs:
     rubocop (0.47.1)
       parser (>= 2.3.3.1, < 3.0)
@@ -333,4 +333,4 @@ RUBY VERSION
    ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.7
+   1.14.1
