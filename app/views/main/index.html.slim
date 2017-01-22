@@ -1,18 +1,17 @@
-.container
+.container.parsed_article_list
+  = render 'paginator'
+
   ul.list-unstyled.row
     - @parsed_articles.each_with_index do |article, index|
       li.col-12.col-md-4
         article.row
-          header.col-7 #{link_to(article.title, article.link)}
-          footer.col-5.text-right
-            = article.feed_source.title
-            br
-            time datetime=article.date #{l(article.date, format: '%d.%m.%Y')}
+          header.col
+            = link_to(article.title, article.link, target: '_blank')
+            span.source_info.text-right.float-right
+              = article.feed_source.title
+              br
+              time datetime=article.date #{l(article.date, format: '%d.%m.%Y')}
+              time< datetime=article.date #{l(article.date, format: '%H:%M')}
+            .clearfix
 
-  .row.justify-content-center
-    = paginate @parsed_articles,
-            theme: 'prev_next_theme',
-            window: 0,
-            remote: true,
-            outer_window: 0,
-            params: { controller: 'main', action: 'index' }
+  = render 'paginator'

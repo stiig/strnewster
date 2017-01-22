@@ -1,2 +1,11 @@
 @import "bootstrap";
 @import "custom";
+
+.parsed_article_list {
+  article {
+    margin-bottom: 20px;
+  }
+  .source_info {
+    font-size: .75rem;
+  }
+}
