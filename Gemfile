@@ -9,6 +9,7 @@ end
 gem 'rails', '~> 5.0.1'
 gem 'pg', '~> 0.18'
 
+gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'bootstrap4-kaminari-views'
 gem 'coffee-rails', '~> 4.2'
