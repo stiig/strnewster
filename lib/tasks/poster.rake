@@ -1,0 +1,2 @@
+namespace :poster do
+end

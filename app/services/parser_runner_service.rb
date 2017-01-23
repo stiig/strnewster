@@ -19,7 +19,6 @@ class ParserRunnerService
         parsed_elements.each do |obj|
           parsed_item = obj.to_h.merge(feed_source: element)
           el = ParsedArticle.find_or_create_by(parsed_item)
-          el.update(parsed_item) if obj.date > el.date
         end
       end
     end
