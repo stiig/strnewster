@@ -25,6 +25,7 @@ gem 'slim-rails'
 gem 'sprockets-es6'
 gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
+gem 'vk-ruby'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
