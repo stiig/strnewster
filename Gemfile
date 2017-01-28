@@ -31,9 +31,6 @@ gem 'vk-ruby'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
 group :development, :test do
   gem 'awesome_print'
   gem 'brakeman', require: false
@@ -51,12 +48,18 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'bullet'
+  gem 'capistrano', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano3-puma', require: false
   gem 'listen', '~> 3.0.5'
   gem 'pry-rails'
   gem 'sextant'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'squasher'
+  gem 'sshkit-sudo', require: false
   gem 'web-console', '>= 3.3.0'
 end
 
