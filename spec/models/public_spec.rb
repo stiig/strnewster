@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe Public do
   subject { create(:public) }
   describe 'attribute' do

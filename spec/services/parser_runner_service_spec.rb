@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe ParserRunnerService do
   url = 'http://example.com/rss'
   subject { described_class }

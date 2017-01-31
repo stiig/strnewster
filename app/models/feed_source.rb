@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class FeedSource < ApplicationRecord
   validates :title, :url, presence: true
   validates :active, inclusion: { in: [true, false] }

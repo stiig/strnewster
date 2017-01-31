@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe MainController do
   describe 'GET #index' do
     it 'returns http success' do

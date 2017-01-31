@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class ParserRunnerService
   def self.parse_data
     logger = Rails.logger

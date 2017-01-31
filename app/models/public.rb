@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Public < ApplicationRecord
   validates :outer_id, :width, :height, :mode, :wide, :title, presence: true
 

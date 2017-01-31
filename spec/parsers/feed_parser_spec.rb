@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe FeedParser do
   uri = 'http://example.com/rss'
 

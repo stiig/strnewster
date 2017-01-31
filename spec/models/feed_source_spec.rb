@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 describe FeedSource do
   subject { create(:feed_source) }
   describe 'attributes' do
