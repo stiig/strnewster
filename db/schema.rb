@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170115133135) do
+ActiveRecord::Schema.define(version: 20170201173218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20170115133135) do
     t.boolean  "active",     null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "source_url"
     t.index ["url"], name: "index_feed_sources_on_url", unique: true, using: :btree
   end
 

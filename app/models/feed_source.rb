@@ -15,6 +15,7 @@ end
 #  active     :boolean          not null
 #  created_at :datetime         not null
 #  id         :integer          not null, primary key
+#  source_url :string
 #  title      :string           not null
 #  updated_at :datetime         not null
 #  url        :string           not null
