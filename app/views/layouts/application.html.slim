@@ -8,7 +8,10 @@ html lang='ru'
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
   body
-    .container
-      h1  Пульс Стерлитамака
+    header.container
+      h1 Пульс Стерлитамака
+
     = yield
+
+    footer Данный сайт является лишь агрегатором новостных порталов. Для просмотра полных новостей переходите по ссылкам
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
