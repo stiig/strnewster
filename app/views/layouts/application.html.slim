@@ -16,4 +16,6 @@ html lang='ru'
     footer
       | Данный сайт является лишь агрегатором новостных порталов. Для просмотра полных новостей переходите по ссылкам
         Источники:
+      - FeedSource.all.each do |source|
+        = link_to(source.title, source.source_url)
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
