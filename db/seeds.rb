@@ -17,12 +17,18 @@ publics = [
 ]
 
 feed_sources = [
-  { title: 'SterlitamakCity', url: 'http://sterlitamakcity.ru/news.feed?type=atom', active: true },
-  { title: 'Sterlitamak.ru', url: 'http://sterlitamak.ru/newscity/rss/', active: true },
-  { title: 'SterliGrad', url: 'http://sterlegrad.ru/str/rss.xml', active: true },
-  { title: 'Стерлитамакский Рабочий', url: 'http://srgazeta.ru/feed/atom/', active: true },
-  { title: 'Cityopen', url: 'http://cityopen.ru/?feed=rss2&type=atom', active: true },
-  { title: 'SOS-Sterlitamak', url: 'http://www.sos-str.ru/rss_news.php', active: true }
+  { title: 'SterlitamakCity', url: 'http://sterlitamakcity.ru/news.feed?type=atom', active: true,
+    source_url: 'http://sterlitamakcity.ru/' },
+  { title: 'Sterlitamak.ru', url: 'http://sterlitamak.ru/newscity/rss/', active: true,
+    source_url: 'http://sterlitamak.ru/' },
+  { title: 'SterliGrad', url: 'http://sterlegrad.ru/str/rss.xml', active: true,
+    source_url: 'http://sterlegrad.ru/' },
+  { title: 'Стерлитамакский Рабочий', url: 'http://srgazeta.ru/feed/atom/', active: true,
+    source_url: 'http://srgazeta.ru/' },
+  { title: 'Cityopen', url: 'http://cityopen.ru/?feed=rss2&type=atom', active: true,
+    source_url: 'http://cityopen.ru/' },
+  { title: 'SOS-Sterlitamak', url: 'http://www.sos-str.ru/rss_news.php', active: true,
+    source_url: 'http://www.sos-str.ru/' }
 ]
 
 logger.info 'Seeds publics'

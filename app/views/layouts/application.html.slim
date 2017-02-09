@@ -8,14 +8,16 @@ html lang='ru'
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
   body
-    header.container
-      h1 Пульс Стерлитамака
+    section.container
+      header
+        h1 Пульс Стерлитамака
 
-    = yield
+      = yield
 
-    footer
-      | Данный сайт является лишь агрегатором новостных порталов. Для просмотра полных новостей переходите по ссылкам
-        Источники:
-      - FeedSource.all.each do |source|
-        = link_to(source.title, source.source_url)
+      footer
+        p Данный сайт является лишь агрегатором новостных порталов. Для просмотра полных новостей переходите по ссылкам
+        p Источники:
+        ul
+          - FeedSource.all.each do |source|
+            li = link_to(source.title, source.source_url)
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
