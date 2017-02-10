@@ -19,5 +19,5 @@ html lang='ru'
         p Источники:
         ul
           - FeedSource.all.each do |source|
-            li = link_to(source.title, source.source_url)
+            li = link_to(source.title, source.source_url, target: '_blank')
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
