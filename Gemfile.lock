@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bbatsov/rubocop.git
-  revision: 245924afceb315739168fa7533f75f543af5b49c
+  revision: 573cf0d06d8557884e6956bf6c4d862f7ef0065a
   specs:
     rubocop (0.47.1)
       parser (>= 2.3.3.1, < 3.0)
@@ -75,7 +75,7 @@ GEM
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
-    brakeman (3.4.1)
+    brakeman (3.5.0)
     builder (3.2.3)
     bullet (5.5.0)
       activesupport (>= 3.0.0)
@@ -133,7 +133,7 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faker (1.7.2)
+    faker (1.7.3)
       i18n (~> 0.5)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
@@ -148,7 +148,7 @@ GEM
     highline (1.7.8)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (0.7.0)
+    i18n (0.8.0)
     jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
@@ -196,7 +196,7 @@ GEM
     minitest (5.10.1)
     multi_json (1.10.1)
     multipart-post (2.0.0)
-    net-http-digest_auth (1.4)
+    net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -206,7 +206,7 @@ GEM
       mini_portile2 (~> 2.1.0)
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
-    parser (2.3.3.1)
+    parser (2.4.0.0)
       ast (~> 2.2)
     pg (0.19.0)
     powerpack (0.1.1)
@@ -313,7 +313,7 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     squasher (0.2.0)
-    sshkit (1.11.5)
+    sshkit (1.12.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     sshkit-sudo (0.1.0)
