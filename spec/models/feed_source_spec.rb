@@ -20,6 +20,15 @@ describe FeedSource do
         expect(subject.valid?).to be false
       end
     end
+
+    context 'source_url' do
+      it 'must be valid' do
+        expect(subject.valid?).to be true
+
+        subject.source_url = nil
+        expect(subject.valid?).to be true
+      end
+    end
   end
 
   describe 'scopes' do

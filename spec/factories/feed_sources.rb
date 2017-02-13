@@ -5,5 +5,6 @@ FactoryGirl.define do
     title { Faker::Lorem.sentence }
     url { Faker::Internet.url }
     active { Faker::Boolean.boolean }
+    source_url { Faker::Internet.url }
   end
 end
