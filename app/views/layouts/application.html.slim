@@ -17,7 +17,7 @@ html lang='ru'
       footer
         p Данный сайт является лишь агрегатором новостных порталов. Для просмотра полных новостей переходите по ссылкам
         p Источники:
-        ul
+        ul.list-unstyled.row.justify-content-center.text-center
           - FeedSource.all.each do |source|
-            li = link_to(source.title, source.source_url, target: '_blank')
+            li.col-12.col-sm = link_to(source.title, source.source_url, target: '_blank')
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
