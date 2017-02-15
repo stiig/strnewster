@@ -1,5 +1,5 @@
-/coverage
-/spec/tmp
+# Ignore bundler config.
+/.bundle
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -9,11 +9,14 @@
 
 # Ignore Byebug command history file.
 .byebug_history
-config/database.yml
-spec/examples.txt
-#config/secrets.yml
 
-/.idea
+# Ignore tests stuff
+/coverage
+/spec/tmp
+/spec/examples.txt
 
 # Ignore application configuration
 /config/application.yml
+/config/database.yml
+
+/.idea
