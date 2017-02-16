@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 describe 'main/index.html.slim' do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'should render list of parsed articles' do
+    assign(:parsed_articles, create_list(:parsed_article, 10))
+    stub_template 'main/_paginator' => 'stubbed paginator'
+    render
+  end
 end
