@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   end
 
   root 'main#index'
-  resources :main, only: :index, concerns: :paginatable, path: ''
-  resources :resource, only: :show
+  with_options concerns: :paginatable do
+    resources :main, only: :index, path: ''
+    resources :resource, only: :show
+  end
 end
