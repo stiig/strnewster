@@ -1,5 +1,5 @@
 .container.parsed_article_list
-  = render 'main/paginator'
+  = render 'shared/paginator', items: @parsed_articles
 
   ul.list-unstyled.row
     - @parsed_articles.each_with_index do |article, index|
@@ -14,4 +14,4 @@
               time< datetime=article.date #{l(article.date, format: '%H:%M')}
             .clearfix
 
-  = render 'main/paginator'
+  = render 'shared/paginator', items: @parsed_articles
