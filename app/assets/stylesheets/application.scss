@@ -1,6 +1,15 @@
 @import "bootstrap";
 @import "custom";
 
+header {
+  h1 {
+    a, a:hover {
+      color: $gray-dark;
+      text-decoration: none;
+    }
+  }
+}
+
 .parsed_article_list {
   article {
     margin-bottom: 20px;
