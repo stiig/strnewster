@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin.git
-  revision: 13ab1d63605570356a15aaeec74dadb0a0eb4a46
+  revision: 8166ae9143f2d6b2d41233558ddc12b4c615014a
   specs:
     activeadmin (1.0.0.pre4)
       arbre (~> 1.0, >= 1.0.2)
@@ -19,7 +19,7 @@ GIT
 
 GIT
   remote: https://github.com/bbatsov/rubocop.git
-  revision: 573cf0d06d8557884e6956bf6c4d862f7ef0065a
+  revision: c6dad32f3f0b70f32815d29e43c4d5d75ab4d7f8
   specs:
     rubocop (0.47.1)
       parser (>= 2.3.3.1, < 3.0)
@@ -79,7 +79,7 @@ GEM
       activesupport (>= 3.0.0)
     arel (7.1.4)
     ast (2.3.0)
-    autoprefixer-rails (6.7.2)
+    autoprefixer-rails (6.7.4)
       execjs
     awesome_print (1.7.0)
     babel-source (5.8.35)
@@ -178,7 +178,7 @@ GEM
     highline (1.7.8)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (0.8.0)
+    i18n (0.8.1)
     inherited_resources (1.7.0)
       actionpack (>= 3.2, < 5.1)
       has_scope (~> 0.6)
@@ -237,7 +237,7 @@ GEM
     net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (4.0.1)
+    net-ssh (4.1.0)
     nio4r (1.2.1)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
@@ -253,10 +253,10 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-rails (0.3.4)
+    pry-rails (0.3.5)
       pry (>= 0.9.10)
     public_suffix (2.0.5)
-    puma (3.7.0)
+    puma (3.7.1)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -357,7 +357,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    squasher (0.2.0)
+    squasher (0.2.1)
     sshkit (1.12.0)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
