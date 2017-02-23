@@ -6,14 +6,15 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'rails', '~> 5.0.1'
 gem 'pg', '~> 0.18'
+gem 'rails', '~> 5.0.1'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'autoprefixer-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'devise-i18n'
 gem 'figaro'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
