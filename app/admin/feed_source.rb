@@ -13,5 +13,11 @@ ActiveAdmin.register FeedSource do
 #   permitted
 # end
 
+  permit_params [:title, :source_url, :slug]
 
+  controller do
+    def find_resource
+      scoped_collection.friendly.find(params[:id])
+    end
+  end
 end

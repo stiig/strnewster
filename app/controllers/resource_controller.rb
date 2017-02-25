@@ -10,6 +10,6 @@ class ResourceController < ApplicationController
   private
 
   def set_resource
-    @resource = FeedSource.find(params[:id])
+    @resource = FeedSource.friendly.find(params[:id])
   end
 end
