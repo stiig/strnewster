@@ -4,6 +4,8 @@ SimpleCov.start do
   add_filter "/config/"
   add_filter "/db/"
 
+  add_filter "app/admin"
+
   add_group "Controllers", "app/controllers"
   add_group "Models", "app/models"
   add_group "Mailers", "app/mailers"
