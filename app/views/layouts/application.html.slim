@@ -10,7 +10,8 @@ html lang='ru'
   body
     section.container
       header
-        h1 = link_to 'Пульс Стерлитамака', root_path
+        nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+          = link_to 'Пульс Стерлитамака', root_path, class: 'navbar-brand'
 
       = yield
 
