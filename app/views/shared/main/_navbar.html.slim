@@ -1,0 +1,11 @@
+nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
+  button.navbar-toggler.navbar-toggler-right [type='button'
+    data={toggle: 'collapse', target: '#navbarNavAltMarkup'}
+    aria={controls: 'navbarNavAltMarkup', expanded: 'false', label: 'Переключатель навигации'}]
+    span.navbar-toggler-icon
+
+  = link_to 'Пульс Стерлитамака', root_path, class: 'navbar-brand'
+  div.collapse.navbar-collapse#navbarNavAltMarkup
+    nav.navbar-nav
+      a.nav-item.nav-link Новостные ресурсы
+      a.nav-item.nav-link Паблики

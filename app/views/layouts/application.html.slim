@@ -10,8 +10,7 @@ html lang='ru'
   body
     section.container
       header
-        nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
-          = link_to 'Пульс Стерлитамака', root_path, class: 'navbar-brand'
+        = render 'shared/main/navbar'
 
       = yield
 
