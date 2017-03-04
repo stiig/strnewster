@@ -19,7 +19,7 @@ class ParserRunnerService
       else
         parsed_elements.each do |obj|
           parsed_item = obj.to_h.merge(feed_source: element)
-          el = ParsedArticle.find_or_create_by(parsed_item)
+          ParsedArticle.find_or_create_by(parsed_item)
         end
       end
     end
