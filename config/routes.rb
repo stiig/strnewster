@@ -14,5 +14,5 @@ Rails.application.routes.draw do
   root 'main#index'
 
   resources :main, only: :index, path: '', concerns: :paginatable_collection
-  resources :resource, only: :show, concerns: :paginatable_member
+  resources :resources, only: [:index, :show], concerns: :paginatable_member
 end

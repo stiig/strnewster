@@ -1,8 +1,9 @@
 .container.parsed_article_list
+  h2 = @resource.title
   = render 'shared/paginator', items: @parsed_articles
 
   ul.list-unstyled.row
-    - @parsed_articles.each_with_index do |article, index|
+    - @parsed_articles.each do |article|
       li.col-12.col-md-4
         article.row
           header.col

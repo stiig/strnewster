@@ -1,0 +1,5 @@
+.container
+  h2 Новостные ресурсы
+  ul.list-unstyled.row.resources
+    - @resources.each do |source|
+      li.col-12.col-sm-4.item = link_to(source.title, resource_path(source))

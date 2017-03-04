@@ -1,0 +1,6 @@
+footer
+  p Данный сайт является лишь агрегатором новостных порталов. Для просмотра полных новостей переходите по ссылкам
+  p Источники:
+  ul.list-unstyled.row.justify-content-center.text-center
+    - FeedSource.all.each do |source|
+      li.col-12.col-sm = link_to(source.title, source.source_url, target: '_blank')
