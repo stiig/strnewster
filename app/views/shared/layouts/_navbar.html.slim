@@ -7,6 +7,6 @@ nav.navbar.navbar-toggleable-md.navbar-light.bg-faded
   = link_to 'Пульс Стерлитамака', root_path, class: 'navbar-brand'
   div.collapse.navbar-collapse#navbarNavAltMarkup
     nav.navbar-nav
-      a.nav-item.nav-link Все новости
+      = link_to 'Все новости', news_index_path, class: 'nav-item nav-link'
       = link_to 'Новостные ресурсы', resources_path, class: 'nav-item nav-link'
       a.nav-item.nav-link Паблики

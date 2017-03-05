@@ -1,14 +1,15 @@
 AllCops:
   Include:
-    - Rakefile
     - config.ru
     - lib/**/*.rake
+    - Rakefile
   Exclude:
+    - '**/templates/**/*'
+    - '**/vendor/**/*'
     - bin/**/*
     - config/**/*
     - db/**/*
-    - '**/vendor/**/*'
-    - '**/templates/**/*'
+    - Gemfile
 
 Lint/AssignmentInCondition:
   Exclude:

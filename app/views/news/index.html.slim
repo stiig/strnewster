@@ -1,0 +1,17 @@
+.container.parsed_article_list
+  = render 'shared/paginator', items: @parsed_articles
+
+  ul.list-unstyled.row
+    - @parsed_articles.each_with_index do |article, index|
+      li.col-12.col-md-4
+        article.row
+          header.col
+            = link_to(article.title, article.link, target: '_blank')
+            span.source_info.text-right.float-right
+              = link_to(article.feed_source.title, resource_path(article.feed_source))
+              br
+              time datetime=article.date #{l(article.date, format: '%d.%m.%Y')}
+              time< datetime=article.date #{l(article.date, format: '%H:%M')}
+            .clearfix
+
+  = render 'shared/paginator', items: @parsed_articles

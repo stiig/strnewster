@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   root 'main#index'
 
-  resources :main, only: :index, path: '', concerns: :paginatable_collection
+  resources :main, only: :index, path: ''
   resources :resources, only: [:index, :show], concerns: :paginatable_member
+  resources :news, only: :index, concerns: :paginatable_collection
 end
