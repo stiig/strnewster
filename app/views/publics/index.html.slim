@@ -1,0 +1,7 @@
+.container
+  h2 Паблики
+  ul.list-unstyled.row
+    - @publics.each do |public|
+      li.col-12.col-md-4
+        article.row.justify-content-center
+          div.vk_public[id="vk_groups_#{public.outer_id}"]
