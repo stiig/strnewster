@@ -1,6 +1,6 @@
 .container
   h2 Все новости
-  = search_form_for @q, url: news_index_path, class: 'form-inline justify-content-end find-form', remote: true do |f|
+  = search_form_for @q, url: news_index_path, class: 'form-inline justify-content-end find-form' do |f|
     = f.search_field :title_cont,
             class: 'form-control mb-2 mr-sm-2 mb-2',
             placeholder: 'Заголовок содержит'

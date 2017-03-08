@@ -37,7 +37,7 @@ $(document).on('turbolinks:load', function () {
     if (window.turbolinks_referer) {
         // yandex metrika
         if (window.yaCounter43311019) {
-            window.yaCounter43311019.hit(location.href, $('title').html(), window.turbolinks_referer);
+            window.yaCounter43311019.hit(location.href, {title: $('title').html(), referer: window.turbolinks_referer});
         }
     }
 });
