@@ -28,11 +28,11 @@
     }
 })(document, window, "yandex_metrika_callbacks");
 
-$(document).on('page:before-change', function () {
+$(document).on('turbolinks:before-visit', function () {
     window.turbolinks_referer = location.href;
 });
 
-$(document).on('page:load', function () {
+$(document).on('turbolinks:load', function () {
     if (window.turbolinks_referer) {
         // yandex metrika
         if (window.yaCounter43311019) {
