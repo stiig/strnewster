@@ -9,6 +9,14 @@ html lang='ru'
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     script src="//vk.com/js/api/openapi.js?140"
+    = javascript_include_tag 'counters', 'data-turbolinks-track' => 'reload'
+
+    /! Yandex.Metrika counter
+    noscript
+      div
+        img src="https://mc.yandex.ru/watch/43311019" style="position:absolute; left:-9999px;" alt=""
+    /! /Yandex.Metrika counter
+
   body
     section.container
       header
