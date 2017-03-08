@@ -6,7 +6,8 @@
                 clickmap: true,
                 trackLinks: true,
                 accurateTrackBounce: true,
-                webvisor: true
+                webvisor: true,
+                trackHash:true
             });
         } catch (e) {
         }
