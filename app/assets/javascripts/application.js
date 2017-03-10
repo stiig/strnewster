@@ -12,6 +12,7 @@
 //
 // require jquery_ujs
 //= require jquery
+
 //= require bootstrap/util
 //= require bootstrap/alert
 //= require bootstrap/button
@@ -21,5 +22,10 @@
 //= require bootstrap/modal
 //= require bootstrap/scrollspy
 //= require bootstrap/tab
+
 //= require turbolinks
+
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.ru.js
+
 //= require_tree .
