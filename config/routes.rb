@@ -20,4 +20,9 @@ Rails.application.routes.draw do
     resources :news, concerns: :paginatable_collection
     resources :publics
   end
+
+  unless Rails.application.config.consider_all_requests_local
+    get '*path', to: 'application#error_404', via: :all
+  end
+
 end
