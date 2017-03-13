@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { create(:user) }
+
+  it 'can be created' do
+    is_expected.to be_truthy
+  end
 end

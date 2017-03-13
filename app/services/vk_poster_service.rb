@@ -12,8 +12,8 @@ class VkPosterService
     begin
       app.wall.post(owner_id: ENV['VK_GROUP_ID'], message: post.text, form_group: 0)
       post.published!
-    rescue VK::Error => err
-      warn("VK not available or #{err.message}")
+    rescue VK::Error => e
+      warn("VK not available or #{e.message}")
     end
   end
 

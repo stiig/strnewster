@@ -1,5 +1,9 @@
 # frozen_string_literal: true
 
 describe AdminUser do
-  pending "add some examples to (or delete) #{__FILE__}"
+  subject { create(:admin_user) }
+
+  it 'can be created' do
+    is_expected.to be_truthy
+  end
 end
