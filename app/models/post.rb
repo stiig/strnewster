@@ -3,7 +3,7 @@
 class Post < ApplicationRecord
   enum status: [:created, :published]
 
-  def self.build_for_publication
+  def self.create_for_publication
     last_post = last
 
     articles = ParsedArticle.all
