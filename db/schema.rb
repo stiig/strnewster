@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170312071049) do
+ActiveRecord::Schema.define(version: 20170321062448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,6 +56,13 @@ ActiveRecord::Schema.define(version: 20170312071049) do
     t.string   "slug",       null: false
     t.index ["slug"], name: "index_feed_sources_on_slug", unique: true, using: :btree
     t.index ["url"], name: "index_feed_sources_on_url", unique: true, using: :btree
+  end
+
+  create_table "feedbacks", force: :cascade do |t|
+    t.string   "contact"
+    t.text     "message",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parsed_articles", force: :cascade do |t|
