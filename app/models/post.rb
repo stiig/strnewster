@@ -24,7 +24,7 @@ end
 #  created_at             :datetime         not null
 #  id                     :integer          not null, primary key
 #  last_parsed_article_id :integer          not null
-#  status                 :integer          default(0), not null
+#  status                 :integer          default("created"), not null
 #  text                   :text             default(""), not null
 #  updated_at             :datetime         not null
 #
