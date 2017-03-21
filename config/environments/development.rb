@@ -54,18 +54,19 @@ Rails.application.configure do
 
   config.generators do |g|
     g.hidden_namespaces << :test_unit << :erb
-    g.test_framework  :rspec
     g.integration_tool :rspec
+    g.scaffold_controller :scaffold_controller
+    g.test_framework  :rspec
   end
 
   config.after_initialize do
-    Bullet.enable = true
+    Bullet.add_footer = true
     Bullet.alert = true
     Bullet.bullet_logger = true
     Bullet.console = true
+    Bullet.enable = true
     # Bullet.growl = true
     Bullet.rails_logger = true
-    Bullet.add_footer = true
   end
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
