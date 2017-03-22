@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :main, only: :index, path: ''
   resources :resources, only: [:index, :show], concerns: :paginatable_member
+  resources :feedbacks, only: [:new, :create]
 
   with_options only: :index do
     resources :news, concerns: :paginatable_collection
