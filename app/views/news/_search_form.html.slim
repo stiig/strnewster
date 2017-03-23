@@ -1,0 +1,23 @@
+= search_form_for @q, url: news_index_path, class: 'form-inline justify-content-end find-form' do |f|
+  = f.search_field :title_cont,
+          class: 'form-control mb-2 mr-sm-2 mb-2',
+          placeholder: 'Заголовок содержит'
+
+  = f.search_field :date_gteq_datetime,
+          class: 'form-control mb-2 mr-sm-2 mb-2 datepicker',
+          placeholder: 'С даты',
+          value: @date_from
+
+  .mr-sm-2 —
+
+  = f.search_field :date_lteq_datetime,
+          class: 'form-control mb-2 mr-sm-2 mb-2 datepicker',
+          placeholder: 'По дату',
+          value: @date_to
+
+  = f.collection_select :feed_source_id_eq, FeedSource.all, :id, :title,
+          { include_blank: 'Ресурс' },
+          class: 'form-control mb-2 mr-sm-2 mb-2'
+  div
+    = button_tag 'Поиск', class: 'mr-2 mb-2 btn btn-primary', role: 'button'
+    = link_to 'Сбросить', news_index_path, class: 'mb-2 btn btn-warning', role: 'button'

@@ -44,7 +44,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 3.5'
-  gem 'rubocop', require: false, github: 'bbatsov/rubocop'
+  gem 'rubocop', require: false
   gem 'webmock', require: false
 end
 

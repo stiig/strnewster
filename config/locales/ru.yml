@@ -1,4 +1,12 @@
 ru:
   devise:
     sessions:
-      sign_out: "Выйти"
+      sign_out: 'Выйти'
+
+  activerecord:
+    models:
+      feedback: 'Отзыв'
+    attributes:
+      feedback:
+        contact: 'Контактные данные'
+        message: 'Сообщение'
