@@ -9,22 +9,27 @@ ru:
         one: 'Новостной ресурс'
         few: 'Новостные ресурсы'
         many: 'Новостные ресурсы'
+        other: 'Новостные ресурсы'
       feedback:
         one: 'Отзыв'
         few: 'Отзывы'
         many: 'Отзывы'
+        other: 'Отзывы'
       parsed_article:
         one: 'Новость'
         few: 'Новости'
         many: 'Новости'
+        other: 'Новости'
       post:
         one: 'Пост в ВК'
         few: 'Поста в ВК'
         many: 'Посты в ВК'
+        other: 'Посты в ВК'
       public:
         one: 'Паблик'
         few: 'Паблики'
         many: 'Паблики'
+        other: 'Паблики'
 
     attributes:
       feedback:
