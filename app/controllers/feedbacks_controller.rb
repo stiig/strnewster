@@ -9,7 +9,7 @@ class FeedbacksController < ApplicationController
     @feedback = Feedback.new(feedback_params)
 
     if @feedback.save
-      redirect_to root_path, notice: 'Ваше сообщение успешно отправлено'
+      redirect_to root_path, flash: { success: 'Ваше сообщение успешно отправлено' }
     else
       render :new
     end

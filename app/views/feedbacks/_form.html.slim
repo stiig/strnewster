@@ -1,12 +1,7 @@
 .row.justify-content-center
   .col-sm-8
     = form_for @feedback do |f|
-      - if @feedback.errors.any?
-        #error_explanation
-          h2 = 'Исправьте следующие ошибки перед сохранением:'
-          ul
-            - @feedback.errors.full_messages.each do |message|
-              li = message
+      = form_errors(@feedback)
 
       .form-group.row
         = f.label :contact, class: 'col-sm-4 col-form-label'
@@ -19,5 +14,5 @@
           = f.text_area :message, class: 'form-control'
 
       .form-group.row
-        .offset-sm-2.col-sm-10
+        .offset-sm-4.col-sm-8
           = f.submit 'Отправить', class: 'btn btn-primary'

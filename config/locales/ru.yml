@@ -5,7 +5,27 @@ ru:
 
   activerecord:
     models:
-      feedback: 'Отзыв'
+      feed_source:
+        one: 'Новостной ресурс'
+        few: 'Новостные ресурсы'
+        other: 'Новостные ресурсы'
+      feedback:
+        one: 'Отзыв'
+        few: 'Отзывы'
+        other: 'Отзывы'
+      parsed_article:
+        one: 'Новость'
+        few: 'Новости'
+        other: 'Новости'
+      post:
+        one: 'Пост в ВК'
+        few: 'Поста в ВК'
+        other: 'Посты в ВК'
+      public:
+        one: 'Паблик'
+        few: 'Паблики'
+        other: 'Паблики'
+
     attributes:
       feedback:
         contact: 'Контактные данные'

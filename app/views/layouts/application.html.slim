@@ -23,6 +23,9 @@ html lang='ru'
       header
         = render 'shared/layouts/navbar'
 
+      .container
+        = flash_messages
+
       = yield
 
       = render 'shared/layouts/footer'

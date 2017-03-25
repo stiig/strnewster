@@ -12,7 +12,9 @@ class Post < ApplicationRecord
 
     return nil if articles.size < 5
 
-    pub_text = articles.reduce('') { |sum, el| sum + "#{el.title.strip} #{el.link.strip}\n" }.rstrip
+    title = "Последние новости на текущий момент: \n"
+    pub_text = articles.reduce(title) { |sum, el| sum + "• #{el.title.strip} #{el.link.strip}\n" }
+    pub_text = "#{pub_text}#Стерлитамак #Стр #новости"
     create text: pub_text, last_parsed_article_id: articles.last.id
   end
 end
