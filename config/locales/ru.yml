@@ -5,6 +5,11 @@ ru:
 
   activerecord:
     models:
+      comment:
+        one: 'Комментарий'
+        few: 'Комментариев'
+        many: 'Комментариев'
+        other: 'Комментарии'
       feed_source:
         one: 'Новостной ресурс'
         few: 'Новостные ресурсы'
