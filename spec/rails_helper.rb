@@ -21,7 +21,7 @@ RSpec.configure do |config|
   config.filter_rails_from_backtrace!
 
   config.include FactoryGirl::Syntax::Methods
-  config.include SharedContext::SharedFunctions
+  config.include Support::SharedFunctions
 
   config.before :suite do
     DatabaseCleaner.clean_with :truncation

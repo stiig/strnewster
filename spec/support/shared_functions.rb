@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module SharedContext
+module Support
   module SharedFunctions
     def change_all_requests_local(param)
       Rails.application.config.consider_all_requests_local = param
