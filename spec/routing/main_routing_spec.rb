@@ -6,17 +6,10 @@ describe 'routes for Main page' do
     expect(get: '/').to route_to(controller: 'main', action: 'index')
   end
 
-  it 'unkown route /unkwon_path to Application controller and error_404 action' do
-    change_all_requests_local(false)
-    allow(Rails.application.config).to receive(:consider_all_requests_local).and_return(true)
-    expect(get: '/unkwon_path').to route_to(controller: 'application', action: 'error_404', path: 'unkwon_path')
-    change_all_requests_local(true)
-  end
-
-  private
-
-  def change_all_requests_local(param)
-    Rails.application.config.consider_all_requests_local = param
-    Strnewster::Application.reload_routes!
+  it 'unknown route /unknown_path to Application controller and error_404 action' do
+    change_all_requests_local(false) do
+      expect(get: '/unknown_path').to route_to(controller: 'application',
+                                               action: 'error_404', path: 'unknown_path')
+    end
   end
 end
