@@ -10,4 +10,10 @@ describe ApplicationHelper do
       expect(helper.bootstrap_class_for('unknown')).to eq 'unknown'
     end
   end
+
+  describe '#flash_messages' do
+    it 'should return blank html code without flash' do
+      expect(helper.flash_messages).to be nil
+    end
+  end
 end
