@@ -12,7 +12,7 @@ describe ApplicationHelper do
   end
 
   describe '#flash_messages' do
-    it 'should return blank html code without flash' do
+    it 'should return blank html code without flashes' do
       expect(helper.flash_messages).to be nil
     end
   end

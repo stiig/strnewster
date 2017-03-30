@@ -17,6 +17,7 @@ describe FeedbacksController do
         expect do
           post :create, params: { feedback: valid_attributes }
         end.to change(Feedback, :count).by(1)
+        expect(flash[:success]).to be_present
       end
 
       it 'should return redirect http status' do
