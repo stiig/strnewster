@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'rss'
+
 shared_context 'shared rss and atom', shared_context: :metadata do |**kwargs|
   let(:time_now) { Time.now.utc }
   let(:uri) { kwargs[:uri] || 'http://example.com/rss' }

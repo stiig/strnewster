@@ -5,13 +5,16 @@ describe ParserRunnerService do
   subject { described_class }
   let(:feed_source) { create(:feed_source, active: true, url: url) }
 
-  context '::parse_data' do
+  describe '.parse_data' do
     context 'when something went wrong should write in log when' do
       before :each do
         stub_request(:get, feed_source.url)
       end
 
-      it('body is empty') { subject.parse_data }
+      # TODO: Check logs with expect
+      it 'body is empty' do
+        subject.parse_data
+      end
 
       it 'network time-out' do
         stub_request(:get, feed_source.url).to_timeout
