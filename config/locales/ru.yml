@@ -5,6 +5,11 @@ ru:
 
   activerecord:
     models:
+      admin_user:
+        one: 'Администратор'
+        few: 'Администраторов'
+        many: 'Администраторов'
+        other: 'Администраторы'
       comment:
         one: 'Комментарий'
         few: 'Комментариев'
