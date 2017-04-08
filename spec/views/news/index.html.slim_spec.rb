@@ -2,8 +2,8 @@
 
 describe 'news/index.html.slim' do
   it 'should render list of parsed articles' do
-    assign(:parsed_articles, create_list(:parsed_article, 20))
-    stub_template 'shared/_paginator' => 'stubbed paginator'
+    create_list(:parsed_article, 20)
+    assign(:parsed_articles, ParsedArticle.page(1).per(10))
     stub_template '_search_form' => 'stubbed paginator'
     render
   end
