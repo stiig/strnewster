@@ -6,7 +6,7 @@ ActiveAdmin.register Public do
   form do |_f|
     inputs do
       input :title
-      input :outer_id
+      input :outer_id, required: true
       input :mode
       input :wide
       input :width
