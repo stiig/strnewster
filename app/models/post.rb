@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Post < ApplicationRecord
-  enum status: %i(created published)
+  enum status: %i[created published]
 
   def self.create_for_publication
     last_post = last

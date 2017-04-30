@@ -9,7 +9,7 @@ class FeedSource < ApplicationRecord
 
   has_many :parsed_articles
 
-  scope :activated, -> { where active: true }
+  scope :activated, (-> { where active: true })
 
   friendly_id :title, use: [:slugged]
 end
