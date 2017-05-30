@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin.git
-  revision: a5df0d7231022dc8a3684033f141e7fc0bd640a1
+  revision: d941aaa88c6e9011f7e9d1c7d85b2cd871160f0f
   specs:
     activeadmin (1.0.0)
       arbre (>= 1.1.1)
@@ -233,7 +233,7 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (4.1.0)
-    nio4r (2.0.0)
+    nio4r (2.1.0)
     nokogiri (1.7.2)
       mini_portile2 (~> 2.1.0)
     ntlm-http (0.1.1)
@@ -313,7 +313,7 @@ GEM
       rspec-mocks (~> 3.6.0)
       rspec-support (~> 3.6.0)
     rspec-support (3.6.0)
-    rubocop (0.49.0)
+    rubocop (0.49.1)
       parallel (~> 1.10)
       parser (>= 2.3.3.1, < 3.0)
       powerpack (~> 0.1)
@@ -473,4 +473,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.14.6
+   1.15.0
