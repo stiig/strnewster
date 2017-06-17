@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
+require 'rmagick'
+
 module ImageCreatorService
   class << self
+    include Magick
     def generate_image(text)
-      MiniMagick::Tool::Convert.new do |image|
-        image.size '1200x1200'
-        image.caption text
-        image << 'blank.png'
-      end
+      image = Image.new(1000, 1000)
     end
     private
   end
