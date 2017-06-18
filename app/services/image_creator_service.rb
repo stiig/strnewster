@@ -18,7 +18,8 @@ module ImageCreatorService
     img_text.gravity = Magick::WestGravity
     img_text.annotate(image, 0, 0, 20, 0, wrap_text(text))
 
-    image.display
+    image.format = 'png'
+    image.to_blob
   end
 
   private_class_method
