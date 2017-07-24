@@ -31,7 +31,7 @@ module ImageCreatorService
   def fit_text(text, width)
     separator = ' '
     line = ''
-    if not text_fit?(text, width) and text.include? separator
+    if !text_fit?(text, width) && text.include?(separator)
       i = 0
       text.split(separator).each do |word|
         tmp_line = i.zero? ? line + word : line + separator + word
