@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'sshkit/sudo'
 require 'capistrano/setup'
 require 'capistrano/deploy'

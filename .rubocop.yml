@@ -8,6 +8,7 @@ AllCops:
     - '**/templates/**/*'
     - '**/vendor/**/*'
     - bin/**/*
+    - Capfile
     - config/**/*
     - db/**/*
     - Gemfile
