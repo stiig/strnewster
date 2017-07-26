@@ -36,11 +36,8 @@ module ImageCreatorService
       text.split(separator).each do |word|
         tmp_line = i.zero? ? line + word : line + separator + word
 
-        if text_fit?(tmp_line, width)
-          line += separator unless i.zero?
-        else
-          line += '\n' unless i.zero?
-        end
+        add_character = text_fit?(tmp_line, width) ? separator : '\n'
+        line += add_character unless i.zero?
         line += word
         i += 1
       end
