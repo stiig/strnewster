@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin.git
-  revision: 64395cc2ead111dd524f8eda505264209646cb09
+  revision: 45a82cf1e5e94b2c95270ce3a6a01ddad54aa53b
   specs:
     activeadmin (1.1.0)
       arbre (>= 1.1.1)
@@ -92,7 +92,7 @@ GEM
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.10.0)
     byebug (9.0.6)
-    capistrano (3.8.2)
+    capistrano (3.9.0)
       airbrussh (>= 1.0.0)
       i18n
       rake (>= 10.0.0)
@@ -149,7 +149,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.12.2)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.11.0.1)
+    faraday_middleware (0.12.0)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.9.18)
     figaro (1.1.1)
