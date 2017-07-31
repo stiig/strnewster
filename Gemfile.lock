@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin.git
-  revision: 45a82cf1e5e94b2c95270ce3a6a01ddad54aa53b
+  revision: 719910024a3acc8c4283c106cafd5620317b9214
   specs:
     activeadmin (1.1.0)
       arbre (>= 1.1.1)
@@ -74,7 +74,7 @@ GEM
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
     bcrypt (3.1.11)
-    better_errors (2.1.1)
+    better_errors (2.2.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
       rack (>= 0.9.0)
