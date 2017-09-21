@@ -12,6 +12,7 @@
 //
 // require jquery_ujs
 //= require jquery
+//= require jquery3
 
 //= require bootstrap/util
 //= require bootstrap/alert
