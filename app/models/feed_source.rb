@@ -7,7 +7,7 @@ class FeedSource < ApplicationRecord
   validates :active, inclusion: { in: [true, false] }
   validates :url, uniqueness: true
 
-  has_many :parsed_articles
+  has_many :parsed_articles, dependent: :nullify
 
   scope :activated, (-> { where active: true })
 
