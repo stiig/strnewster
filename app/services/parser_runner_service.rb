@@ -5,6 +5,7 @@ module ParserRunnerService
 
   def parse_data
     with_log do |logger|
+      # TODO: will try parse in threads
       FeedSource.activated.each do |element|
         parsed_elements = []
         begin
