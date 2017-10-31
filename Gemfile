@@ -43,7 +43,7 @@ group :development, :test do
   gem 'brakeman', require: false
   gem 'byebug', platform: :mri
   gem 'database_cleaner'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'faker'
   gem 'rspec-rails', '~> 3.5'
   gem 'rubocop', require: false
