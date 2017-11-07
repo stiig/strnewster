@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-FactoryGirl.define do
+FactoryBot.define do
   factory :public do
     title { Faker::Lorem.word }
     outer_id { Faker::Number.between(100_000, 99_999_999) }
