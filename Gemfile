@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'devise'
 gem 'devise-i18n'
 gem 'figaro'
-gem 'friendly_id', '~> 5.1.0'
+gem 'friendly_id', '~> 5.2.0'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
@@ -61,7 +61,7 @@ group :development do
   gem 'capistrano-rvm', require: false
   gem 'capistrano-upload-config', require: false
   gem 'capistrano3-puma', require: false
-  gem 'listen', '~> 3.0.5'
+  gem 'listen', '>= 3.0.5', '< 3.2'
   gem 'pry-rails'
   gem 'sextant'
   gem 'spring'
