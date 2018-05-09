@@ -19,7 +19,7 @@ class FeedParser
   def perform_request
     old_def_encoding = Encoding.default_internal
     Encoding.default_internal = nil
-    doc = open(@url, read_timeout: 5, open_timeout: 3).read
+    doc = OpenURI.open_uri(@url, read_timeout: 5, open_timeout: 3).read
     yield doc
     Encoding.default_internal = old_def_encoding
   end
