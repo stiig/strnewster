@@ -24,6 +24,7 @@ module ApplicationHelper
 
   def form_errors(form, _show_field = true)
     return '' if form&.errors.blank?
+
     content_tag :div do
       concat(content_tag(:div, id: 'error_explanation') do
         content_tag :h2, 'Исправьте следующие ошибки перед сохранением:'

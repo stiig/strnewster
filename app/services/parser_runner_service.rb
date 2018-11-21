@@ -22,16 +22,14 @@ module ParserRunnerService
     end
   end
 
-  private_class_method
-
-  def with_log
+  private_class_method def with_log
     logger = Rails.logger
     logger.info 'ParserRunnerService start'
     yield logger
     logger.info 'ParserRunnerService finish'
   end
 
-  def handle_parsed_elements(elements, parent_source, logger)
+  private_class_method def handle_parsed_elements(elements, parent_source, logger)
     if elements.blank?
       logger.warn "#{parent_source.title}: #{parent_source.url} empty answer"
     else

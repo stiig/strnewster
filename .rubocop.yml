@@ -1,5 +1,9 @@
+inherit_mode:
+  merge:
+    - Include
+
 AllCops:
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5
   Include:
     - config.ru
     - lib/**/*.rake
@@ -48,6 +52,10 @@ Style/Documentation:
 Rails/FilePath:
   Exclude:
     - 'config/environments/development.rb'
+
+Layout/AlignHash:
+  Exclude:
+    - lib/tasks/auto_annotate_models.rake
 
 Rails:
   Enabled: true

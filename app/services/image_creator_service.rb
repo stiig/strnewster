@@ -22,13 +22,12 @@ module ImageCreatorService
     image.to_blob
   end
 
-  private_class_method
 
-  def wrap_text(text)
+  private_class_method def wrap_text(text)
     text.split("\n").collect { |str| fit_text(str.gsub(%r{(?:f|ht)tps?:/[^\s]+}, ''), 580) }.join("\n\n")
   end
 
-  def fit_text(text, width)
+  private_class_method def fit_text(text, width)
     separator = ' '
     line = ''
     if !text_fit?(text, width) && text.include?(separator)
@@ -46,7 +45,7 @@ module ImageCreatorService
     text
   end
 
-  def text_fit?(text, width)
+  private_class_method def text_fit?(text, width)
     tmp_image = Image.new(width, 500)
     drawing = Draw.new
     drawing.annotate(tmp_image, 0, 0, 0, 0, text) do |txt|

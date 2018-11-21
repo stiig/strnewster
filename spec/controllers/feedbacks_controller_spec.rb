@@ -7,7 +7,7 @@ describe FeedbacksController do
   describe 'GET #new' do
     it 'should return success' do
       get :new
-      expect(response).to be_success
+      expect(response).to have_http_status(:successful)
     end
   end
 
