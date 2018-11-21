@@ -11,7 +11,7 @@ gem 'rails', '~> 5.2.0'
 
 gem 'activeadmin', github: 'activeadmin'
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem "bootstrap", ">= 4.1.2"
 gem 'bootstrap-datepicker-rails'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
