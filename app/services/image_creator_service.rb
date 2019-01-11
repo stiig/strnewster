@@ -22,7 +22,6 @@ module ImageCreatorService
     image.to_blob
   end
 
-
   private_class_method def wrap_text(text)
     text.split("\n").collect { |str| fit_text(str.gsub(%r{(?:f|ht)tps?:/[^\s]+}, ''), 580) }.join("\n\n")
   end

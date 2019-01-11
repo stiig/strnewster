@@ -5,7 +5,7 @@
       li.col-12.col-md-4
         article.row
           header.col
-            = link_to(article.title, article.link, target: '_blank')
+            = link_to(article.title, article.link, target: '_blank', rel: 'noopener')
             span.source_info.text-right.float-right
               = link_to(article.feed_source.title, resource_path(article.feed_source))
               br

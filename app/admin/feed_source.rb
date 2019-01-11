@@ -9,7 +9,7 @@ ActiveAdmin.register FeedSource do
       link_to feed_source.id, admin_feed_source_path(feed_source)
     end
     column :title do |feed_source|
-      link_to(feed_source.title, feed_source.source_url, target: '_blank')
+      link_to(feed_source.title, feed_source.source_url, target: '_blank', rel: 'noopener')
     end
     column :active
     column :slug

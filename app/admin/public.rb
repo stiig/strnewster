@@ -10,7 +10,7 @@ ActiveAdmin.register Public do
     end
     column :title
     column :outer_id do |public|
-      link_to(*(["https://vk.com/public#{public.outer_id}"] * 2), target: '_blank')
+      link_to(*(["https://vk.com/public#{public.outer_id}"] * 2), target: '_blank', rel: 'noopener')
     end
     actions dropdown: true
   end
