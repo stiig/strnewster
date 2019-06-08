@@ -8,7 +8,7 @@ class VkPosterService
   def call
     return unless post
 
-    app = VK::Application.new(app_id: ENV['VK_APP_ID'], version: '3', access_token: ENV['VK_KEY'])
+    app = VK::Application.new(app_id: ENV['VK_APP_ID'], version: '5.95', access_token: ENV['VK_KEY'])
     begin
       photo_id = prepare_image(app, post.text)
       app.wall.post(owner_id: ENV['VK_GROUP_ID'], message: post.text, form_group: 0, attachments: photo_id)
