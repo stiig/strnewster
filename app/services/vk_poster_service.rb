@@ -38,7 +38,7 @@ class VkPosterService
   end
 
   def post_image(raw_uri, image_io)
-    uri = URI(serv['upload_url'])
+    uri = URI(raw_uri)
 
     conn = Faraday.new(uri) do |f|
       f.request :multipart
