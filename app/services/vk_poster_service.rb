@@ -11,7 +11,10 @@ class VkPosterService
     app = VK::Application.new(app_id: ENV['VK_APP_ID'], version: '5.95', access_token: ENV['VK_KEY'])
     begin
       photo_id = prepare_image(app, post.text)
-      app.wall.post(owner_id: ENV['VK_GROUP_ID'], message: post.text, form_group: 0, attachments: photo_id)
+      app.wall.post(owner_id: ENV['VK_GROUP_ID'],
+                    message: post.text,
+                    form_group: 0,
+                    attachments: "photo#{ENV['OWNER_ID']}_#{photo_id}")
       post.published!
     rescue VK::Error => e
       warn("VK not available or #{e.message}")
@@ -35,7 +38,7 @@ class VkPosterService
   end
 
   def post_image(raw_uri, image_io)
-    uri = URI(raw_uri)
+    uri = URI(serv['upload_url'])
 
     conn = Faraday.new(uri) do |f|
       f.request :multipart
