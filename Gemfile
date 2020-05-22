@@ -22,7 +22,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'kaminari'
 gem 'kaminari-i18n'
-gem 'puma', '~> 3.0'
+gem 'puma', '~> 3.12'
 gem 'ransack'
 gem 'recaptcha', require: 'recaptcha/rails'
 gem 'rmagick', require: false
